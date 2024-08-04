@@ -4,18 +4,126 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Chen Xin - FrontEnd Engineer Resume</title>
+    <style>
+      body {
+        font-family: Helvetica, sans-serif;
+      }
+    </style>
   </head>
-  <body>
-    <main class="prose container mx-auto">
-      <section id="basic-info">
-        <p class="name">Chen Xin</p>
-        <p class="job">Front End Engineer</p>
+  <body class="bg-zinc-50">
+    <main class="prose container mx-auto shadow-lg my-12 py-6 px-8 bg-white  rounded w-[898px] max-w-screen-lg text-sm">
+      <section id="about" class="flex justify-between">
+        <div>
+          <p class="text-4xl font-extrabold m-0">Chen Xin</p>
+          <p class="text-2xl font-extrabold my-1">Front-End Engineer</p>
+        </div>
+        <div class="flex flex-col justify-around">
+          <span class="flex items-center">
+            <svg class="mr-2 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a class="no-underline" href="mailto:chanshiyucx@gmail.com" target="_blank">chanshiyucx@gmail.com</a>
+          </span>
+          <span class="flex items-center">
+            <svg class="mr-2 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +86 138-0842-3263
+          </span>
+          <span class="flex items-center">
+            <svg class="mr-2 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <a class="no-underline" href="https://github.com/chanshiyucx" target="_blank">github.com/chanshiyucx</a>
+          </span>
+        </div>
       </section>
-      <section id="education"></section>
-      <section id="work-experience"></section>
-      <section id="skills"></section>
+      <section id="profile">
+        <h3 class="mt-4 mb-2">PROFILE</h3>
+        <div class="text-justify">
+          Highly skilled Front-End Engineer with 7 years of experience in developing, optimizing, and maintaining web applications. Proficient in React and Vue for building high-performance web solutions. Collaborated with cross-functional teams to deliver high-quality code and worked closely with designers to ensure the accurate implementation of UI components, layouts, and visuals. Demonstrated success in enhancing website performance and functionality through adherence to coding standards and effective troubleshooting.
+        </div>
+      </section>
+      <section id="work-experience">
+        <h3 class="mt-4 mb-2">WORK EXPERIENCE</h3>
+        <div>
+          <div>
+            <div class="flex justify-between">
+              <span>
+                <span class="font-bold">Senior Front-End Engineer</span>
+                <span class="mx-2">-</span>
+                <span>Hunan Toyou Feiji Electronics</span>
+              </span>
+              <span>2022.8 - present</span>
+            </div>
+            <ul class="mt-2 text-justify">
+              <li>Revamped the storage management platform with TypeScript, transitioning to a front-end/back-end architecture, refactoring key modules and implementing caching to cut page load time by 40%. </li>
+              <li>Engineered and deployed Redfish-compliant RESTful APIs, collaborating with the team to overhaul over 200 interfaces, streamlining storage device management and supporting communication for hundreds of nodes in a single cluster. </li>
+              <li>Crafted real-time data center visualization tools, enhancing monitoring and maintenance of equipment health, greatly facilitating maintenance and troubleshooting for operations personnel. </li>
+              <li>Developed an AI-powered big data model chat page, providing after-sales personnel with technical documentation support, boosting communication efficiency by 50%. </li>
+              <li>Replaced build tool with Vite, reducing cold start time by 70% and enhancing front-end development. </li>
+              <li>Enforced ESLint rules, resolving 300+ syntax errors and elevating code quality. </li>
+              <li>Incorporated Tailwind CSS, reducing style redundancy and accelerating development. </li>
+              <li>Created and maintained technical documentation, ensuring seamless knowledge transfer and collaboration between team members, increasing team efficiency and productivity by 25%.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="flex justify-between">
+              <span>
+                <span class="font-bold">Front-End Engineer</span>
+                <span class="mx-2">-</span>
+                <span>Shenzhen Blitz Interactive Entertainment</span>
+              </span>
+              <span>2018.4 - 2022.04</span>
+            </div>
+            <ul class="mt-2 text-justify">
+              <li>Developed and maintained the company's proprietary IM communication system, enabling users to interact with professional customer service for business inquiries and feedback, serving as the core infrastructure for the company’s portal and mobile app.</li>
+              <li>Designed and developed a front-end chat interface supporting rich media formats (text, images, videos, audio, files), resulting in a 25% increase in user engagement and a 20% decrease in bounce rate.</li>
+              <li>Engineered a back-end session reception system with flexible dialogue allocation (round-robin, average, returning customers) and features like dialogue transfer and monitoring, boosting customer service response efficiency by 40%.</li>
+              <li>Built a data analysis interface for generating visual reports from reception records, allowing efficient monitoring of session data, customer preferences, and business issues.</li>
+              <li>Implemented lazy load to improve the Activities Manager's table initial loading speed by 5%.</li>
+              <li>Architected and customized a component library, developing over 20 components (tables, modals, forms) to align with business needs, enhancing development efficiency and consistency. </li>
+            </ul>
+          </div>
+          <div>
+            <div class="flex justify-between">
+              <span>
+                <span class="font-bold">Front-End Engineer</span>
+                <span class="mx-2">-</span>
+                <span>Shanghai Jinji Network Technology</span>
+              </span>
+              <span>2016.9 - 2018.04</span>
+            </div>
+            <ul class="mt-2 text-justify">
+              <li>Engineered a React Native client app, integrating ijkplayer for a cross-platform video player.</li>
+              <li>Optimized a business backend with Ant Design, enabling large file chunk uploads and resumes, increasing speeds by 30%.</li>
+              <li>Revamped the company website, enhancing UI and layout, which boosted traffic by 30%.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="education">
+        <h3 class="mt-4 mb-2">EDUCATION</h3>
+        <div>
+          <div class="flex justify-between">
+            <span class="font-bold">Bachelor of Communication Engineering</span>
+            <span>2012.6 - 2016.6</span>
+          </div>
+          <div class="flex justify-between">
+              <span>University of Electronic Science and Technology of China</span>
+              <span>Chengdu, China</span>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <h3 class="mt-4 mb-2">SKILLS</h3>
+        <div>
+          <div>
+            <span class="inline-block w-36 font-bold">Technical Skills</span>
+            <span>HTML, CSS, JavaScript, TypeScript, React, Vue, NextJS, NodeJS, Python, Java, Git, SVN</span>
+          </div>
+          <div>
+            <span class="inline-block w-36 font-bold">Core Competencies</span>
+            <span>Performance Optimization, Cross-Browser Compatibility, Cross-Functional Collaboration</span>
+          </div>
+        </div>
+      </section>
+      </div>
     </main>
   </body>
 </html>
