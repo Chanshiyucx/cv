@@ -3,203 +3,288 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <title>Xin Chen - FrontEnd Engineer Resume</title>
-    <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #003366;
+      }
       body {
-        font-family: Helvetica, sans-serif;
+        font-family: "Merriweather", serif;
       }
 
-      .tiny-top {
-        margin-top: .5em!important;
+      h3 {
+        @apply text-primary font-bold text-xl;
       }
 
-    </style>
+      ul {
+        @apply pl-6 list-disc space-y-1.5 mt-1.5;
+
+        li {
+          @apply pl-1;
+        }
+      }
+    </style>     
   </head>
   <body class="bg-zinc-50 print:bg-white">
-    <a href="./Xin Chen - Frontend Developer Resume.pdf" target="_blank" class="print:hidden block flex justify-center items-center top-4 right-4 w-40 h-10 rounded tracking-wider mt-4 font-bold md:fixed md:mt-0 ">
-      <span>DOWNLOAD</span>
-      <svg class="w-5 ml-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-    </a>
-    <main class="print:m-0 print:shadow-none print:pt-2 prose mx-auto my-4 p-8 bg-white rounded max-w-[898px] text-base md:shadow-lg md:my-16 space-y-6">
-      <section id="about" class="md:flex justify-between">
-        <div class="flex flex-col gap-4">
-            <div class="flex flex-col  gap-1">
-              <p class="text-4xl font-extrabold m-0 mb-5">Xin Chen</p>
-              <span class="flex items-center">
-                <svg class="mr-2 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                <a class="no-underline" href="mailto:chanshiyucx@gmail.com" target="_blank">chanshiyucx@gmail.com</a>
-              </span>
-              <span class="flex items-center">
-                <svg class="mr-2 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                +49 15560857486  
-              </span> 
-              <span class="flex items-center">
-                <svg class="mr-2 w-4" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-                Thalkirchner Str. 88, 80337 Munich, Germany
-              </span>
-              <span class="flex items-center">
-                <svg  class="mr-2 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round-icon lucide-circle-user-round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
-                14 August 1994, Jiangxi, China
-              </span>
+    <main class="print:m-0 print:shadow-none print:pt-2 prose mx-auto my-4 p-8 bg-white rounded max-w-[794px] text-base space-y-6">
+      <section id="about" class="flex justify-between items-center">
+        <div class="flex flex-col gap-3 justify-between">
+          <div>
+            <h2 class="text-4xl font-extrabold m-0">Xin Chen</h2>
+            <p class="text-lg italic">Frontend Developer</p>
+          </div>
+          <div class="flex flex-row flex-wrap w-full gap-1 ml-0.5">
+            <span class="flex items-center gap-2 w-66">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+              </svg>
+              +49 15560857486  
+            </span> 
+            <span class="flex items-center gap-2 w-66">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+              </svg>
+              <a class="no-underline" href="mailto:chanshiyucx@gmail.com" target="_blank">chanshiyucx@gmail.com</a>
+            </span>
+            <span class="flex items-center gap-2 w-66">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-minus-fill" viewBox="0 0 16 16">
+                <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2M6 10h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1"/>
+              </svg>
+              14 August 1994, China
+            </span>
+            <span class="flex items-center gap-2 w-76">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+              </svg>
+              Thalkirchner Str. 88, 80337 Munich
+            </span>
+            <span class="flex items-center gap-2 w-66">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+              </svg>
+              <a class="no-underline" href="https://linkedin.com/in/xinchen-cx" target="_blank">linkedin.com/in/xinchen-cx</a>
+            </span>
+            <span class="flex items-center gap-2 w-76">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5M9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8m1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5m-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96q.04-.245.04-.5M7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0"/>
+              </svg>
+              Work Permit: Opportunity Card
+            </span>
           </div>
         </div>
-        <div class="ml-10 shrink-0">
-          <img src="./static/avatar.jpg" alt="avatar" class="m-0 w-36 rounded-lg">
-        </div>
+        <img src="./static/avatar.jpg" alt="avatar" class="w-30 h-40 object-cover rounded-lg">
       </section>
 
       <section id="profil" class="tiny-top">
         <div class="flex items-center mb-2">
-          <h3 class="m-0">PROFILE</h3>
-          <div class="flex-1 ml-4 bg-zinc-500 h-0.5 rounded"></div>
+          <h3 class="flex flex-row items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+            </svg>
+            PROFILE
+          </h3>
+          <div class="flex-1 ml-4 bg-primary h-0.5 rounded"></div>
         </div>
         <div>
-            Experienced Frontend Developer with 8+ years of expertise in building web applications using React, Vue.js, and TypeScript. Proven track record in optimizing complex systems, implementing user interfaces, and leading cross-functional teams. Seeking new challenges in the German market.
+          Senior Frontend Developer with over 8 years of experience architecting and delivering high-performance web applications using React, Vue.js, and TypeScript. 
+          Adept at enhancing the performance of complex systems, implementing intuitive user interfaces, and leading cross-functional teams to achieve project goals.
+          Eager to contribute my skills to a forward-thinking company in Germany.
         </div>
       </section>
 
       <section id="work-experience" >
         <div class="flex items-center mb-2">
-          <h3 class="m-0">PROFESSIONAL EXPERIENCE</h3>
-          <div class="flex-1 ml-4 bg-zinc-500 h-0.5 rounded"></div>
+          <h3 class="flex flex-row items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+              <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
+              <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
+            </svg>
+            PROFESSIONAL EXPERIENCE
+          </h3>
+          <div class="flex-1 ml-4 bg-primary h-0.5 rounded"></div>
         </div>
-        <div>
-          <div class="flex flex-row justify-between">
-            <div class="w-40 shrink-0 font-bold">
+        <div class="space-y-2">
+          <div class="flex flex-row">
+            <div class="w-44 shrink-0 font-bold pt-0.5">
+              02/2025 - 07/2025
+            </div>
+            <div>
+              <div class="ml-2">
+                <p class="text-lg font-bold">German Language Learner (B1)</p>
+                <p class="italic">Ludwig-Maximilians-Universität München, Germany</p>
+              </div>
+              <ul class="mb-0">
+                <li>Completed "German for study and work"- A2+ level</li>
+              </ul>
+              <div class="ml-2 mt-2">
+                <p class="italic">Deutsch Akademie München, Germany</p>
+              </div>
+              <ul class="mb-0">
+                <li>Completed "Intensivkurs"- A1、A2、B1 level</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-row">
+            <div class="w-44 shrink-0 font-bold pt-0.5">
               08/2022 - 10/2024
             </div>
             <div>
-                <div class="ml-3 font-bold">
-                    <span>Senior Frontend Developer</span>
-                    <span class="mx-2 max-md:hidden">|</span>
-                    <span>Toyou Feiji Electronics, Changsha, China</span>
-                </div>
-              <ul class="mt-2">
-                    <li>Led technical architecture for complete overhaul of storage management platform using Vue.js and TypeScript, implementing modern frontend-backend separation</li>
-                    <li>Developed Redfish-compliant RESTful APIs, refactoring over 100 interfaces to optimize storage device management for cluster environments</li>
-                    <li>Designed and implemented AI-powered chat tool using Vue.js integrated with Ragflow for enhanced after-sales support</li>
-                    <li>Streamlined development workflow by migrating to Vite (achieving 60%+ faster build times) and implementing ESLint standards, resolving 300+ code issues. Integrated Tailwind CSS to reduce style redundancy</li>
-                    <li>Mentored 3 junior developers and established comprehensive code review processes</li>
+              <div class="ml-2">
+                <p class="text-lg font-bold">Senior Frontend Developer</p>
+                <p class="italic">Toyou Feiji Electronics, Changsha, China</p>
+              </div>
+              <ul>
+                <li>Led technical architecture for complete overhaul of storage management platform using Vue.js and TypeScript, implementing modern frontend-backend separation</li>
+                <li>Developed Redfish-compliant RESTful APIs, refactoring over 100 interfaces to optimize storage device management for clusters</li>
+                <li>Designed and implemented AI-powered chat tool using Vue.js integrated with Ragflow for enhanced after-sales support</li>
+                <li>Streamlined development workflow by migrating to Vite (achieving 60%+ faster build times) and implementing ESLint standards, resolving 300+ code issues. Integrated Tailwind CSS.</li>
+                <li>Mentored 3 junior developers and established comprehensive code review processes</li>
               </ul>
             </div>
           </div>
-          <div class="flex flex-row justify-between">
-            <div class="w-40 shrink-0">
-              <span class="font-bold">04/2018 - 04/2022</span>
+          <div class="flex flex-row">
+            <div class="w-44 shrink-0 font-bold pt-0.5">
+              04/2018 - 04/2022
             </div>
-           <div>
-            <div class="ml-3 font-bold">
-                <span>Frontend Developer</span>
-                <span class="mx-2 max-md:hidden">|</span>
-                <span>Blitz Interactive Entertainment, Shenzhen, China</span>
-            </div>
-            <ul class="mt-2">
-                <li>Built proprietary instant messaging system for enterprise portal and mobile application, featuring real-time business inquiries and feedback</li>
+            <div>
+              <div class="ml-2">
+                <p class="text-lg font-bold">Junior Frontend Developer</p>
+                <p class="italic">Blitz Interactive Entertainment, Shenzhen, China</p>
+              </div>
+              <ul>
+                <li>Built proprietary instant messaging system for enterprise portal and mobile application, featuring business inquiries and feedback</li>
                 <li>Implemented chat interface with rich media support and developed Spring Boot backend for real-time communication. Created analytics dashboard for session data visualization</li>
                 <li>Containerized and deployed complete IM system using Docker for scalable production environment</li>
-                <li>Enhanced Activity Manager performance through lazy loading optimization and developed reusable component library with 20+ components</li>
+                <li>Enhanced Activity Manager performance and developed reusable component library with 20+ components</li>
               </ul>
-           </div>
+            </div>
           </div>
-          <div class="flex flex-row justify-between">
-            <div class="w-40 shrink-0">
-              <span class="font-bold">09/2016 - 04/2018</span>
+          <div class="flex flex-row">
+            <div class="w-44 shrink-0 font-bold pt-0.5">
+              09/2016 - 04/2018
             </div>
-           <div>
-                <div class="ml-3 font-bold">
-                <span>Frontend Developer</span>
-                <span class="mx-2 max-md:hidden">|</span>
-                <span>Jinji Network Technology, Shanghai, China</span>
-            </div>
-            <ul class="mt-2 mb-0">
+            <div>
+              <div class="ml-2">
+                <p class="text-lg font-bold">Junior Frontend Developer</p>
+                <p class="italic">Jinji Network Technology, Shanghai, China</p>
+              </div>
+              <ul class="mb-0">
                 <li>Developed React Native application with ijkplayer integration for video playback across Android and iOS platforms</li>
-                <li>Built web-based admin frontend using React.js and Ant Design, implementing file upload capabilities and business data visualization</li>
+                <li>Built web-based admin frontend using React.js and Ant Design, implementing file upload capabilities and data visualization</li>
                 <li>Redesigned corporate website with improved UI/UX architecture</li>
               </ul>
-           </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="education">
         <div class="flex items-center mb-2">
-          <h3 class="m-0">EDUCATION</h3>
-          <div class="flex-1 ml-4 bg-zinc-500 h-0.5 rounded"></div>
+          <h3 class="flex flex-row items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+              <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z"/>
+              <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z"/>
+            </svg>
+            EDUCATION
+          </h3>
+          <div class="flex-1 ml-4 bg-primary h-0.5 rounded"></div>
         </div>
         <div class="flex flex-row justify-between">
-            <div class="w-40 shrink-0 mr-3">
-                <span class="font-bold">09/2012 - 07/2016</span>
-              </div>
+            <div class="w-44 shrink-0 font-bold pt-0.5">
+              09/2012 - 07/2016
+            </div>
             <div class="flex flex-col flex-1 ">
-                <span class="font-bold">Bachelor of Engineering in Communication Engineering</span>
-                <span>University of Electronic Science and Technology of China, Chengdu, China</span>
+              <p class="text-lg font-bold">Bachelor of Engineering in Communication Engineering</p>
+              <p class="italic">University of Electronic Science and Technology of China, Chengdu, China</p>
             </div>
         </div>
       </section>
 
       <section id="skills">
         <div class="flex items-center mb-2">
-          <h3 class="m-0">TECHNICAL SKILLS</h3>
-          <div class="flex-1 ml-4 bg-zinc-500 h-0.5 rounded"></div>
+          <h3 class="flex flex-row items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-laptop-fill" viewBox="0 0 16 16">
+              <path d="M2.5 2A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+            </svg>
+            TECHNICAL SKILLS
+          </h3>
+          <div class="flex-1 ml-4 bg-primary h-0.5 rounded"></div>
         </div>
         <div class="space-y-2">
           <div class="flex">
-            <span class="inline-block w-40 font-bold shrink-0 mr-3">Frontend</span>
-            <span class="inline-block">HTML, CSS, React.js, Vue.js, Next.js, Tailwind CSS, React Native</span>
+            <span class="inline-block w-44 font-bold shrink-0">Frontend</span>
+            <span class="inline-block">HTML, CSS, React, Vue.js, Next.js, Tailwind CSS, React Native</span>
           </div>
           <div class="flex">
-            <span class="inline-block w-40 font-bold shrink-0 mr-3">Backend</span>
-            <span class="inline-block">Node.js, RESTful APIs, Spring Boot</span>
+            <span class="inline-block w-44 font-bold shrink-0">Backend</span>
+            <span class="inline-block">Node.js, RESTful APIs, Spring Boot, MySQL</span>
           </div>
           <div class="flex">
-            <span class="inline-block w-40 font-bold shrink-0 mr-3">Development Tools</span>
+            <span class="inline-block w-44 font-bold shrink-0">Programming</span>
+            <span class="inline-block">JavaScript, TypeScript, Python, Java</span>
+          </div>
+          <div class="flex">
+            <span class="inline-block w-44 font-bold shrink-0">Development Tools</span>
             <span class="inline-block">Vite, Webpack, Git, ESLint, Docker</span>
           </div>
           <div class="flex">
-            <span class="inline-block w-40 font-bold shrink-0 mr-3">Programming</span>
-            <span class="inline-block">JavaScript, TypeScript, Python, Java</span>
+            <span class="inline-block w-44 font-bold shrink-0">AI Tools</span>
+            <span class="inline-block">Generative AI, Prompt Engineering, Modular Prompt Design</span>
           </div>
-          <div class="flex mt-2">
-            <span class="inline-block w-40 font-bold shrink-0 mr-3">Core Competencies</span>
-            <span class="inline-block">Performance Optimization, Cross-browser Compatibility, Responsive Design, Technical Documentation</span>
+          <div class="flex">
+            <span class="inline-block w-44 font-bold shrink-0">Core Competencies</span>
+            <span class="inline-block">Performance Optimization, Responsive Design, Documentation</span>
           </div>
         </div>
       </section>
 
       <section id="language">
         <div class="flex items-center mb-2">
-          <h3 class="m-0">LANGUAGES</h3>
-          <div class="flex-1 ml-4 bg-zinc-500 h-0.5 rounded"></div>
+          <h3 class="flex flex-row items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="m8 0 .412.01A7.97 7.97 0 0 1 13.29 2a8.04 8.04 0 0 1 2.548 4.382 8 8 0 1 1-15.674 0 8 8 0 0 1 1.361-3.078A8 8 0 0 1 2.711 2 7.96 7.96 0 0 1 8 0m0 1a7 7 0 0 0-5.958 3.324C2.497 6.192 6.669 7.827 6.5 8c-.5.5-1.034.884-1 1.5.07 1.248 2.259.774 2.5 2 .202 1.032-1.051 3 0 3 1.5-.5 3.798-3.186 4-5 .138-1.242-2-2-3.5-2.5-.828-.276-1.055.648-1.5.5S4.5 5.5 5.5 5s1 0 1.5.5c1 .5.5-1 1-1.5.838-.838 3.16-1.394 3.605-2.001A6.97 6.97 0 0 0 8 1"/>
+            </svg>
+            LANGUAGES
+          </h3>
+          <div class="flex-1 ml-4 bg-primary h-0.5 rounded"></div>
         </div>
         <div>
           <div class="flex">
-            <span class="inline-block w-40 font-bold mr-3">Chinese</span>
-            <span>Native</span>
-          </div>
-          <div class="flex">
-            <span class="inline-block w-40 font-bold mr-3">English</span>
+            <span class="inline-block w-44 font-bold">English</span>
             <span>Fluent (B2 CEFR)</span>
           </div>
           <div class="flex">
-            <span class="inline-block w-40 font-bold mr-3">German</span>
+            <span class="inline-block w-44 font-bold">German</span>
             <span class="inline-block">Intermediate (B1 CEFR) - Currently enrolled in intensive course</span>
+          </div>
+          <div class="flex">
+            <span class="inline-block w-44 font-bold">Chinese</span>
+            <span>Native</span>
           </div>
         </div>
       </section>
 
       <section id="personal">
         <div class="flex items-center mb-2">
-          <h3 class="m-0">ADDITIONAL INFORMATION</h3>
-          <div class="flex-1 ml-4 bg-zinc-500 h-0.5 rounded"></div>
+          <h3 class="flex flex-row items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+              <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5"/>
+            </svg>
+            ADDITIONAL INFORMATION
+          </h3>
+          <div class="flex-1 ml-4 bg-primary h-0.5 rounded"></div>
         </div>
         <div class="space-y-2">
             <div class="flex">
-                <span class="inline-block w-40 font-bold shrink-0 mr-3">Open Source</span>
+                <span class="inline-block w-44 font-bold shrink-0">Open Source</span>
                 <span class="inline-block">Active open-source contributor with personal GitHub projects (670+ stars, 300+ followers)</span>
             </div>
             <div class="flex">
-                <span class="inline-block w-40 font-bold shrink-0 mr-3">Interests</span>
+                <span class="inline-block w-44 font-bold shrink-0">Interests</span>
                 <span class="inline-block">Travel, Badminton, Photography</span>
             </div>
         </div>
@@ -207,3 +292,5 @@
     </main>
   </body>
 </html>
+
+
